@@ -48,13 +48,13 @@ Oval_movie = Movie(title='Oval', year='2024', genre='action', recreate=0)
 Bad_Kid = Series(title='Bad Kid', year='2024', genre='comedy', episode='01', season='01', recreate=0)
 print(Bad_Kid)
 
-print(Indiana_movie.recreate)
-print(List_of_all)
+#print(Indiana_movie.recreate)
+#print(List_of_all)
 Indiana_movie.play()
-print(Indiana_movie.recreate)
+#print(Indiana_movie.recreate)
 Bad_Kid.play()
-print(Bad_Kid.recreate)
-print(type(Indiana_movie))
+#print(Bad_Kid.recreate)
+#print(type(Indiana_movie))
  
 list_get_movies = [] 
 def get_movies():
@@ -85,7 +85,7 @@ def search():
             return list_of_search.append(item)
     if len(list_of_search)==0:
         print("Brak takiego tytułu w bazie")   
-#search()
+search()
 
 import random
 def generate_views():
@@ -93,17 +93,26 @@ def generate_views():
     random_item.recreate = random.randrange(1,101)
     print(random_item)
     print(random_item.recreate)
-#generate_views()
+generate_views()
 
 def run_10_generate_views():
     for i in range(10):
         generate_views()
-#run_10_generate_views()
+run_10_generate_views()
 
 list_of_top = sorted(List_of_all, key=lambda recorded2: recorded2.recreate, reverse=1)
-print(list_of_top)
+#print(list_of_top)
+
 def top_titles():
     nof = int(input("Podaj ilość do wyświetlenia z listy top"))
     print(list_of_top[0:nof])
 
 top_titles()
+"""
+def top_titles2():
+    nof = int(input("Podaj ilość do wyświetlenia z listy top"))
+    for item in list_of_top[0:nof]:
+        print(item.title)
+top_titles2()
+
+"""
