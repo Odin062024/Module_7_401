@@ -86,10 +86,16 @@ def search():
     if len(list_of_search)==0:
         print("Brak takiego tytułu w bazie")   
 #search()
+
 import random
 def generate_views():
     random_item = random.choice(List_of_all)
     random_item.recreate = random.randrange(1,101)
     print(random_item)
     print(random_item.recreate)
-generate_views()
+#generate_views()
+
+def run_10_generate_views():
+    for i in range(10):
+        generate_views()
+run_10_generate_views()
