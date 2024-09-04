@@ -43,11 +43,37 @@ class Series:
 Indiana_movie= Movie(title = 'Indiana', year = '2024', genre = 'documentary', recreate = 0)
 print(Indiana_movie)
 
+Oval_movie = Movie(title='Oval', year='2024', genre='action', recreate=0)
+
 Bad_Kid = Series(title='Bad Kid', year='2024', genre='comedy', episode='01', season='01', recreate=0)
 print(Bad_Kid)
+
 print(Indiana_movie.recreate)
 print(List_of_all)
 Indiana_movie.play()
 print(Indiana_movie.recreate)
 Bad_Kid.play()
 print(Bad_Kid.recreate)
+print(type(Indiana_movie))
+ 
+list_get_movies = [] 
+def get_movies():
+    for item in List_of_all:
+        if isinstance(item, Movie):
+            list_get_movies.append(item)
+get_movies()
+print(list_get_movies)
+list_of_movies = sorted(list_get_movies, key=lambda recorded: recorded.title)
+print(list_of_movies) 
+
+list_get_series = [] 
+def get_series():
+    for item in List_of_all:
+        if isinstance(item, Series):
+            list_get_series.append(item)
+get_series()
+print(list_get_series)
+list_of_series = sorted(list_get_series, key=lambda recorded: recorded.title)
+print(list_of_series)
+       
+    
