@@ -98,4 +98,12 @@ def generate_views():
 def run_10_generate_views():
     for i in range(10):
         generate_views()
-run_10_generate_views()
+#run_10_generate_views()
+
+list_of_top = sorted(List_of_all, key=lambda recorded2: recorded2.recreate, reverse=1)
+print(list_of_top)
+def top_titles():
+    nof = int(input("Podaj ilość do wyświetlenia z listy top"))
+    print(list_of_top[0:nof])
+
+top_titles()
