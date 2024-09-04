@@ -1,3 +1,5 @@
+import random
+
 List_of_all = []
 
 class Movie:
@@ -87,7 +89,6 @@ def search():
         print("Brak takiego tytułu w bazie")   
 search()
 
-import random
 def generate_views():
     random_item = random.choice(List_of_all)
     random_item.recreate = random.randrange(1,101)
@@ -101,7 +102,7 @@ def run_10_generate_views():
 run_10_generate_views()
 
 list_of_top = sorted(List_of_all, key=lambda recorded2: recorded2.recreate, reverse=1)
-#print(list_of_top)
+
 
 def top_titles():
     nof = int(input("Podaj ilość do wyświetlenia z listy top"))
@@ -109,13 +110,3 @@ def top_titles():
         print(item)
 
 top_titles()
-
-"""
-def top_titles2():
-    nof = int(input("Podaj ilość do wyświetlenia z listy top"))
-    for item in list_of_top[0:nof]:
-        print(item)
-        print(item.title)
-        print(list_of_top[0:nof])
-top_titles2()
-"""
