@@ -75,5 +75,14 @@ get_series()
 print(list_get_series)
 list_of_series = sorted(list_get_series, key=lambda recorded: recorded.title)
 print(list_of_series)
-       
-    
+
+list_of_search = []      
+def search():
+    searched_title = input("Wpisz tytuł filmu/serialu którego szukasz:")
+    for item in List_of_all:
+        if item.title == searched_title:
+            print(item)
+            return list_of_search.append(item)
+    if len(list_of_search)==0:
+        print("Brak takiego tytułu w bazie")   
+search()
